@@ -13,7 +13,6 @@ body {
 
 .card {
   padding: 3rem;
-  width: 19rem;
 }
 .card--orange {
   background-color: #E28625;
@@ -58,10 +57,13 @@ body {
   color: white;
 }
 .card__text {
-  opacity: 75%;
   font-size: 0.9rem;
   font-weight: 400;
+  opacity: 75%;
   padding-bottom: 5rem;
+  line-height: 1.5rem;
+  opacity: 75%;
+  width: 13.25rem;
 }
 .card__title {
   font-family: "Big Shoulders Display", cursive;
