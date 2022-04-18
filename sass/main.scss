@@ -13,14 +13,17 @@ body {
 }
 
 .card {
-  height: 31.25rem;
   padding: 3rem;
   width: 19rem;
 
   &--orange {
 
     background-color: #E28625;
-    border-radius: .5rem 0 0 .5rem;
+    border-radius: 0.5rem .5rem 0 0;
+
+    @media screen and (min-width: 920px) {
+      border-radius: .5rem 0 0 .5rem;
+    }
   }
 
   &--blue {
@@ -29,23 +32,36 @@ body {
 
   &--green {
     background-color: #004140;
-    border-radius: .5rem 0 0 .5rem;
+    border-radius: 0 0 0.5rem .5rem;
+
+    @media screen and (min-width: 920px) {
+      border-radius: 0 .5rem .5rem 0;
+    }
   }
 
   &__button {
     border: none;
     border-radius: 4rem;
     height: 3rem;
+    transition: all .5s;
     width: 9rem;
 
     &--orange {
       color: #E28625;
     }
+
     &--blue {
       color: #006971;
     }
+
     &--green {
       color: #004140;
+    }
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white;
     }
   }
 
@@ -57,19 +73,32 @@ body {
   }
 
   &__title {
+    font-family: 'Big Shoulders Display', cursive;;
     font-size: 2.5rem;
     font-weight: 700;
     padding: 2rem 0 1.5rem 0;
+    text-transform: uppercase;
   }
 
   &__wrapper {
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    @media screen and (min-width: 920px) {
+      align-items: center;
+      flex-direction: row;
+      justify-content: center;
+    }
   }
 }
 
 .attribution {
+  color: #004140;
   padding-top: 1rem;
-  font-size: .7rem; text-align: center;
+  font-size: .7rem;
+  text-align: center;
 
   a {
     color: hsl(228, 45%, 44%);
